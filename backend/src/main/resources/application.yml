@@ -30,3 +30,15 @@ info:
     name: Clínica Médica API
     description: API REST para gerenciamento de clínica médica
     version: 0.1.0
+    
+app:
+  security:
+    jwt:
+      issuer: clinica-medica-api
+      access-token-expiration-seconds: 900
+      refresh-token-expiration-days: 7
+      secret: ${JWT_SECRET_BASE64}
+
+    cookie:
+      secure: ${AUTH_COOKIE_SECURE:false}
+      same-site: ${AUTH_COOKIE_SAME_SITE:Strict}
