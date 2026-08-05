@@ -29,3 +29,19 @@ logging:
     root: INFO
     br.com.galeradoti.clinica: DEBUG
     org.hibernate.SQL: DEBUG
+
+app:
+  security:
+    jwt:
+      secret: ${JWT_SECRET_BASE64:Q2xpbmljYU1lZGljYUFQSVNlY3JldEtleUZvckRldk9ubHkyMDI2ISE=}
+
+    cookie:
+      secure: false
+      same-site: Strict
+
+  bootstrap:
+    admin:
+      enabled: ${ADMIN_BOOTSTRAP_ENABLED:true}
+      name: ${ADMIN_NAME:Administrador}
+      email: ${ADMIN_EMAIL:admin@clinica.local}
+      password: ${ADMIN_PASSWORD:Admin@123456}

@@ -35,3 +35,16 @@ management:
   endpoint:
     health:
       show-details: never
+
+app:
+  security:
+    jwt:
+      secret: ${JWT_SECRET_BASE64}
+
+    cookie:
+      secure: true
+      same-site: Strict
+
+  bootstrap:
+    admin:
+      enabled: false
