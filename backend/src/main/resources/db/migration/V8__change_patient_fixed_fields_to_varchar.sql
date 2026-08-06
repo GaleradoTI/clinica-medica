@@ -1,0 +1,11 @@
+ALTER TABLE pacientes
+    ALTER COLUMN cpf TYPE VARCHAR(11)
+    USING TRIM(cpf);
+
+ALTER TABLE pacientes
+    ALTER COLUMN cep TYPE VARCHAR(8)
+    USING TRIM(cep);
+
+ALTER TABLE pacientes
+    ALTER COLUMN estado TYPE VARCHAR(2)
+    USING TRIM(estado);
